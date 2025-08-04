@@ -71,6 +71,112 @@ img {
   display: block;
 }
 
+/* Hide default cursor */
+body, * {
+  cursor: none !important;
+}
+
+/* Super Cool Custom Cursor */
+#custom-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.13s cubic-bezier(.4,2.2,.6,1), filter 0.2s;
+  /* Center the SVG */
+  transform: translate(-8px, -8px);
+}
+
+#custom-cursor-inner {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+/* Click effect */
+#custom-cursor.cursor-click {
+  transform: translate(-8px, -8px) scale(0.85);
+  filter: brightness(1.5) drop-shadow(0 0 8px #2563eb);
+}
+
+/* Cursor Trail */
+#cursor-trail {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(37,99,235,0.13);
+  box-shadow: 0 0 16px 4px #2563eb44;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-18px, -18px);
+  transition: background 0.2s, transform 0.13s cubic-bezier(.4,2.2,.6,1);
+}
+#cursor-trail.cursor-click {
+  background: rgba(37,99,235,0.25);
+  transform: translate(-18px, -18px) scale(0.8);
+}
+
+/* Animated Skills Circles */
+.skills__circle-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.skill-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 110px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.skill-circle svg {
+  width: 100px;
+  height: 100px;
+  transform: rotate(-90deg);
+}
+.skill-circle .bg {
+  fill: none;
+  stroke: #e5e7eb;
+  stroke-width: 10;
+}
+.skill-circle .progress {
+  fill: none;
+  stroke: #2563eb;
+  stroke-width: 10;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 8px #2563eb88);
+  transition: stroke 0.3s;
+}
+.skill-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.skill-label-text {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 2px;
+}
+.skill-label-percent {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #22223b;
+  letter-spacing: 1px;
+}
+
 /*===== CLASS CSS ===== */
 .section-title {
   position: relative;
@@ -372,6 +478,21 @@ img {
 }
 .footer__copy {
   font-size: var(--smaller-font-size);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  background: #0a174e;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #2563eb 0%, #0a174e 100%);
+  border-radius: 8px;
+  border: 2px solid #0a174e;
+  box-shadow: 0 0 8px #2563eb88;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
 }
 
 /* ===== MEDIA QUERIES=====*/

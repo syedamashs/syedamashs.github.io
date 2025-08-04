@@ -259,7 +259,7 @@
         </footer>
 
 
-        <a
+         <a
             href="assets/SYED AMASH S - Resume.pdf"  
             target="_blank"
             rel="noopener noreferrer"
@@ -274,31 +274,77 @@
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
 
+        <!-- Anime.js CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+        <!-- Custom Cursor HTML -->
+        <div id="custom-cursor">
+          <svg id="custom-cursor-inner" viewBox="0 0 28 28" fill="none">
+            <polygon points="2,2 26,14 12,16 16,26" fill="#2563eb" stroke="#fff" stroke-width="2" filter="url(#glow)"/>
+            <defs>
+              <filter id="glow" x="-10" y="-10" width="48" height="48">
+                <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+          </svg>
+        </div>
+        <div id="cursor-trail"></div>
+
         <script>
-  const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    loop: false,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 15,
-      },
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-    },
-  });
-</script>
+          // Animated Custom Cursor with trailing effect
+          const cursor = document.getElementById('custom-cursor');
+          const trail = document.getElementById('cursor-trail');
+          let mouseX = 0, mouseY = 0, trailX = 0, trailY = 0;
+          document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
+          });
+          function animateTrail() {
+            trailX += (mouseX - trailX) * 0.18;
+            trailY += (mouseY - trailY) * 0.18;
+            trail.style.left = trailX + 'px';
+            trail.style.top = trailY + 'px';
+            requestAnimationFrame(animateTrail);
+          }
+          animateTrail();
+          document.addEventListener('mousedown', () => {
+            cursor.classList.add('cursor-click');
+            trail.classList.add('cursor-click');
+          });
+          document.addEventListener('mouseup', () => {
+            cursor.classList.remove('cursor-click');
+            trail.classList.remove('cursor-click');
+          });
+        </script>
+
+        <script>
+          // Fix Swiper to show all slides
+          const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 15,
+            loop: false,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+            },
+          });
+        </script>
 
 
     </body>
