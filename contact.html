@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Syed Amash S</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                        },
+                        accent: {
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="antialiased selection:bg-brand-500 selection:text-white relative bg-[#030303] overflow-x-hidden">
+    <!-- Premium Background Context -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div class="absolute inset-0 bg-grid-pattern opacity-30"></div>
+        <div
+            class="absolute top-[-10%] left-[-10%] w-[50rem] h-[50rem] bg-accent-600/10 rounded-full blur-[120px] mix-blend-screen animate-float">
+        </div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50rem] h-[50rem] bg-brand-600/10 rounded-full blur-[120px] mix-blend-screen animate-float"
+            style="animation-delay: -4s;"></div>
+    </div>
+
+    <!-- Navigation (Simplified for subpage) -->
+    <nav class="fixed w-full z-50 transition-all duration-500 bg-transparent py-4 glass-panel" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="font-display font-bold text-2xl tracking-tight group">
+                <span class="text-white group-hover:text-brand-400 transition-colors">S</span><span
+                    class="text-brand-400">A</span><span
+                    class="text-white group-hover:text-brand-400 transition-colors">S</span><span
+                    class="text-accent-500">.</span>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex space-x-1 items-center px-6 py-2">
+                <a href="index.html"
+                    class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-brand-400 transition-colors"><i
+                        class="fas fa-arrow-left mr-2"></i> Back to Home</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <a href="index.html" class="md:hidden text-gray-300 hover:text-white">
+                <i class="fas fa-arrow-left text-xl"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main
+        class="min-h-screen pt-32 pb-20 px-6 flex items-center justify-center relative z-10 transition-opacity duration-700 opacity-0 transform translate-y-8"
+        id="contact-container" style="animation: fadeUp 0.8s forwards;">
+        <div class="max-w-6xl w-full mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+            <!-- Left Info Section -->
+            <div class="space-y-8">
+                <div
+                    class="inline-flex items-center space-x-2 px-4 py-2 rounded-full border border-brand-500/20 glass-panel shadow-lg shadow-brand-500/5">
+                    <span class="relative flex h-2 w-2">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+                    </span>
+                    <span class="text-xs font-bold text-gray-300 uppercase tracking-widest">Available for work</span>
+                </div>
+
+                <h1 class="font-display text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
+                    Let's create something <span class="text-gradient">exceptional.</span>
+                </h1>
+
+                <p class="text-gray-400 text-lg leading-relaxed font-light max-w-md">
+                    Whether you have a question, a project proposal, or just want to say hi, I'll try my best to get
+                    back to you!
+                </p>
+
+                <div class="space-y-6 pt-6">
+                    <div class="flex items-center gap-4 group">
+                        <div
+                            class="w-12 h-12 rounded-full border border-white/5 glass-panel flex items-center justify-center text-brand-400 group-hover:bg-brand-500/10 group-hover:border-brand-500/30 transition-all">
+                            <i class="fas fa-envelope text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-0.5">Email Me</p>
+                            <a href="mailto:hello@example.com"
+                                class="text-gray-200 hover:text-white font-medium transition-colors">hello@example.com</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 group">
+                        <div
+                            class="w-12 h-12 rounded-full border border-white/5 glass-panel flex items-center justify-center text-accent-400 group-hover:bg-accent-500/10 group-hover:border-accent-500/30 transition-all">
+                            <i class="fas fa-location-dot text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-0.5">Location</p>
+                            <p class="text-gray-200 font-medium">Tamil Nadu, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 pt-8 border-t border-white/10">
+                    <a href="#"
+                        class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-brand-500 hover:bg-brand-500/10 transition-all"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com/in/iamsyedamashs" target="_blank"
+                        class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-brand-500 hover:bg-brand-500/10 transition-all"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/syedamashs" target="_blank"
+                        class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-brand-500 hover:bg-brand-500/10 transition-all"><i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <!-- Right Form Section -->
+            <div class="glass-card p-8 md:p-10 rounded-3xl border border-white/10 relative overflow-hidden group">
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-brand-500/10 to-transparent rounded-bl-full opacity-50 pointer-events-none">
+                </div>
+
+                <form id="contactForm" class="relative z-10 space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label for="name" class="text-xs font-bold text-gray-400 uppercase tracking-wider ml-1">Your
+                                Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full bg-[#0a0a0a]/50 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500/50 transition-all placeholder-gray-600"
+                                placeholder="John Doe">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="email"
+                                class="text-xs font-bold text-gray-400 uppercase tracking-wider ml-1">Your Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full bg-[#0a0a0a]/50 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500/50 transition-all placeholder-gray-600"
+                                placeholder="john@example.com">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="subject"
+                            class="text-xs font-bold text-gray-400 uppercase tracking-wider ml-1">Subject</label>
+                        <input type="text" id="subject" name="subject"
+                            class="w-full bg-[#0a0a0a]/50 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500/50 transition-all placeholder-gray-600"
+                            placeholder="Project Proposal">
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="message"
+                            class="text-xs font-bold text-gray-400 uppercase tracking-wider ml-1">Message</label>
+                        <textarea id="message" name="message" rows="5" required
+                            class="w-full bg-[#0a0a0a]/50 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500/50 transition-all placeholder-gray-600 resize-none"
+                            placeholder="Tell me about your project..."></textarea>
+                    </div>
+
+                    <button type="submit" id="submitBtn"
+                        class="w-full py-4 rounded-2xl bg-white text-black font-display font-bold text-lg hover:bg-brand-400 focus:outline-none transition-all duration-300 transform hover:scale-[1.02] shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(45,212,191,0.4)] flex items-center justify-center">
+                        <span id="btnText">Send Message</span>
+                        <i id="btnIcon" class="fas fa-paper-plane ml-3"></i>
+                        <svg id="btnSpinner" class="animate-spin ml-3 h-5 w-5 text-black hidden"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                            </circle>
+                            <path class="opacity-75" fill="currentColor"
+                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <div id="formStatus" class="mt-4 text-center text-sm font-medium hidden"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <style>
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const btnText = document.getElementById('btnText');
+            const btnIcon = document.getElementById('btnIcon');
+            const btnSpinner = document.getElementById('btnSpinner');
+            const statusDiv = document.getElementById('formStatus');
+            const submitBtn = document.getElementById('submitBtn');
+
+            // Loading state
+            btnText.textContent = 'Sending...';
+            btnIcon.classList.add('hidden');
+            btnSpinner.classList.remove('hidden');
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+            statusDiv.classList.add('hidden');
+
+            // Collect Data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+
+            try {
+                // Determine API URL (Local vs Prod)
+                const BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:' || window.location.hostname === ''
+                    ? 'http://localhost:5000'
+                    : 'https://your-production-api.com'; // Change this later if deployed
+
+                const response = await fetch(`${BASE_URL}/api/contact`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    statusDiv.textContent = data.message;
+                    statusDiv.className = 'mt-4 text-center text-sm font-medium text-brand-400 block p-3 rounded-xl bg-brand-500/10 border border-brand-500/20';
+                    document.getElementById('contactForm').reset();
+                } else {
+                    throw new Error(data.message || 'Something went wrong.');
+                }
+            } catch (error) {
+                console.error('Submission Error:', error);
+                statusDiv.textContent = error.message === 'Failed to fetch' ? 'Server is unreachable. Please make sure the backend is running.' : error.message;
+                statusDiv.className = 'mt-4 text-center text-sm font-medium text-red-400 block p-3 rounded-xl bg-red-500/10 border border-red-500/20';
+            } finally {
+                // Reset Button State
+                btnText.textContent = 'Send Message';
+                btnIcon.classList.remove('hidden');
+                btnSpinner.classList.add('hidden');
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+            }
+        });
+    </script>
+</body>
+
+</html>
